@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    container_name: starter-kit-react-2022
+    volumes:
+      - .:/usr/src/app
+    command: sh -c 'yarn && yarn dev'
+    ports:
+      - '3000:5173'
+    tty: true
+
